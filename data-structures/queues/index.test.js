@@ -7,19 +7,19 @@ describe('Queue data structure', () => {
 		queue = new Queue()
 	})
 
-	xit('has a size of 0 initially', () => {
-		expect(queue.size).toBe(0)
+	it('has a bottom of 0 initially', () => {
+		expect(queue.bottom).toBe(0)
 	})
 
 	describe('enqueue method', () => {
 		
-		xit('has an enqueue method', () => {
+		it('has an enqueue method', () => {
 			expect(typeof queue.enqueue).toBe('function')
 		})
 
-		xit('increases size when item is added', () => {
+		it('increases bottom when item is added', () => {
 			queue.enqueue('Snoopy')
-			expect(queue.size).toBe(1)
+			expect(queue.bottom).toBe(1)
 		})
 
 
@@ -27,19 +27,19 @@ describe('Queue data structure', () => {
 
 	describe('dequeue method', () => {
 		
-		xit('has an dequeue method', () => {
+		it('has an dequeue method', () => {
 			expect(typeof queue.dequeue).toBe('function')
 		})
 
-		xit('decreases size when item is dequeued', () => {
+		it('decreases bottom when item is dequeued', () => {
 			queue.enqueue('Snoopy')
 			queue.enqueue('Woodstock')
 			queue.enqueue('Charlie Brown')
 			queue.dequeue()
-			expect(queue.size).toBe(2)
+			expect(queue.bottom).toBe(2)
 		})
 
-		xit('Dequeue returns items based on first in first out', () => {
+		it('Dequeue returns items based on first in first out', () => {
 			queue.enqueue('first')
 			queue.enqueue('second')
 			queue.enqueue('third')
