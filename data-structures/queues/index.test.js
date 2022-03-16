@@ -36,7 +36,7 @@ describe('Queue data structure', () => {
 			queue.enqueue('Woodstock')
 			queue.enqueue('Charlie Brown')
 			queue.dequeue()
-			expect(queue.bottom).toBe(2)
+			expect(queue.bottom).toBe(3)
 		})
 
 		it('Dequeue returns items based on first in first out', () => {
